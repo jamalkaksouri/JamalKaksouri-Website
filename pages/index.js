@@ -61,7 +61,7 @@ const Page = () => {
           in many facets of software development: - Implementation - Design
           Patterns - Architecture - Testing - Distributed Systems - Domain
           Driven Design - Product Development I make software. I keep getting
-          better. program to an interface and not an implementation. See my{' '}
+          better. Program to an interface and not an implementation. See my{' '}
           <NextLink href="/works/projects">
             <Link>projects</Link>
           </NextLink>
