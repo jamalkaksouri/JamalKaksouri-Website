@@ -23,7 +23,7 @@ const Page = () => {
         mb={6}
         textAlign="center"
       >
-        Hello, I&apos;m a software engineer based on Iran.
+        Hello, I&apos;m a software engineer based in Iran.
       </Box>
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
