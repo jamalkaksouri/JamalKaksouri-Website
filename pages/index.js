@@ -59,7 +59,7 @@ const Home = () => {
             maxWidth="100px"
             display="inline-block"
             borderRadius="full"
-            src="/images/me.jpg"
+            src="/images/me-main.png"
             alt="Profile Image"
           />
         </Box>
