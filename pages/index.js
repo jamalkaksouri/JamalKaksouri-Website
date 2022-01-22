@@ -174,14 +174,14 @@ const Home = () => {
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
             href="https://university.mongodb.com/course_completion/39b8a055-2704-476e-81a0-0ceaadaa9e12/printable"
-            title="M220N: MongoDB for .NET Developers"
+            title="MongoDB university certificate"
             thumbnail={mongo}
           >
             M220N: MongoDB for .NET Developers
           </GridItem>
           <GridItem
             href="https://www.credential.net/9c5f5721-d4f8-4df7-b2c6-2115fa2b0c96#gs.6m640l"
-            title="Distributed Systems Design Fundamentals"
+            title="Verify from Particular Software"
             thumbnail={distributedSystems}
           >
             Distributed Systems Design Fundamentals
