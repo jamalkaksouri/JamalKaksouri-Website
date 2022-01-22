@@ -68,13 +68,14 @@ const Home = () => {
           Work
         </Heading>
         <Paragraph>
-          I&apos;m Jamal Kaksouri Seven-year of software development with
-          methods of high-performance software. I focus on SOLID principles and
-          object-oriented programming. I&apos;m well-practiced and well-versed
-          in many facets of software development: - Implementation - Design
-          Patterns - Architecture - Testing - Distributed Systems - Domain
-          Driven Design - Product Development I make software. I keep getting
-          better. Program to an interface and not an implementation. See my{' '}
+          I&apos;m Jamal Kaksouri. A software engineer with 7 years of coding
+          experience and software developer with a high-performance. I focus on
+          SOLID principles and object-oriented programming. I&apos;m
+          well-practiced and well-versed in many facets of software development:
+          Implementation, Design Patterns, Architecture, Testing, Distributed
+          Systems, Domain-Driven Design, and Product Development. I try to keep
+          getting better in software development. Program to an interface and
+          not an implementation. See my{' '}
           <NextLink href="/works/projects">
             <Link>projects</Link>
           </NextLink>
