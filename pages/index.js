@@ -174,7 +174,7 @@ const Home = () => {
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
             href="https://university.mongodb.com/course_completion/39b8a055-2704-476e-81a0-0ceaadaa9e12/printable"
-            title="MongoDB university certificate"
+            title="Verify from MongoDB University"
             thumbnail={mongo}
           >
             M220N: MongoDB for .NET Developers
