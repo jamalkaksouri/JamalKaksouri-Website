@@ -113,8 +113,7 @@ const Home = () => {
           I ♥
         </Heading>
         <Paragraph>
-          Swimming, Music, Draving , Playing ping pong, Mountaineering , Machine
-          Learning
+          Draving , Billiard snooker, Mountaineering , Machine Learning
         </Paragraph>
       </Section>
       <Section delay={0.3}>
