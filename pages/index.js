@@ -23,8 +23,9 @@ import {
   IoLogoGithub,
   IoLogoStackoverflow
 } from 'react-icons/io5'
-import thumbYouTube from '../public/images/coming-soon.jpg'
-import thumbInkdrop from '../public/images/coming-soon.jpg'
+
+import mongo from '../public/images/Certifications/mongo.png'
+import distributedSystems from '../public/images/Certifications/Distributed Systems Design Fundamentals.png'
 
 const Home = () => {
   return (
@@ -171,11 +172,19 @@ const Home = () => {
         </List>
 
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
-          <GridItem href="#" title="Coming-soon" thumbnail={thumbYouTube}>
-            Coming-soon
+          <GridItem
+            href="https://university.mongodb.com/course_completion/39b8a055-2704-476e-81a0-0ceaadaa9e12/printable"
+            title="M220N: MongoDB for .NET Developers"
+            thumbnail={mongo}
+          >
+            M220N: MongoDB for .NET Developers
           </GridItem>
-          <GridItem href="#" title="Coming-soon" thumbnail={thumbInkdrop}>
-            Coming-soon
+          <GridItem
+            href="https://www.credential.net/9c5f5721-d4f8-4df7-b2c6-2115fa2b0c96#gs.6m640l"
+            title="Distributed Systems Design Fundamentals"
+            thumbnail={distributedSystems}
+          >
+            Distributed Systems Design Fundamentals
           </GridItem>
         </SimpleGrid>
 
