@@ -1,19 +1,32 @@
 import NextLink from 'next/link'
 import {
-  Container,
-  Box,
-  Heading,
-  Image,
   Link,
-  useColorModeValue,
-  Button
+  Container,
+  Heading,
+  Box,
+  Image,
+  SimpleGrid,
+  Button,
+  List,
+  ListItem,
+  Icon,
+  useColorModeValue
 } from '@chakra-ui/react'
-import Section from '../components/section'
-import Paragraph from '../components/paragraph'
 import { ChevronRightIcon } from '@chakra-ui/icons'
+import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
+import Section from '../components/section'
+import { GridItem } from '../components/grid-item'
+import {
+  IoLogoTwitter,
+  IoLogoInstagram,
+  IoLogoGithub,
+  IoLogoStackoverflow
+} from 'react-icons/io5'
+import thumbYouTube from '../public/images/coming-soon.jpg'
+import thumbInkdrop from '../public/images/coming-soon.jpg'
 
-const Page = () => {
+const Home = () => {
   return (
     <Container>
       <Box
@@ -30,7 +43,7 @@ const Page = () => {
           <Heading as="h2" variant="page-title">
             Jamal Kaksouri
           </Heading>
-          <p>Betria Design (Development of smart solutions)</p>
+          <p>Software Engineer (Backend / Frontend)</p>
         </Box>
         <Box
           flexShrink={0}
@@ -68,7 +81,7 @@ const Page = () => {
           .
         </Paragraph>
         <Box textAlign="center" my={4}>
-          <NextLink href="/works">
+          <NextLink href="/work">
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
               My portfolio
             </Button>
@@ -103,8 +116,80 @@ const Page = () => {
           Learning
         </Paragraph>
       </Section>
+      <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">
+          On the web
+        </Heading>
+        <List>
+          <ListItem>
+            <Link href="https://github.com/jamalkaksouri" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="teal"
+                leftIcon={<Icon as={IoLogoGithub} />}
+              >
+                @jamalkaksouri
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://twitter.com/jamalkaksouri" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="teal"
+                leftIcon={<Icon as={IoLogoTwitter} />}
+              >
+                @jamalkaksouri
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://instagram.com/jk_betria" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="teal"
+                leftIcon={<Icon as={IoLogoInstagram} />}
+              >
+                @jk_betria
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link
+              href="https://stackoverflow.com/users/4795761/jamal-kaksouri"
+              target="_blank"
+            >
+              <Button
+                variant="ghost"
+                colorScheme="teal"
+                leftIcon={<Icon as={IoLogoStackoverflow} />}
+              >
+                @jamal-kaksouri
+              </Button>
+            </Link>
+          </ListItem>
+        </List>
+
+        <SimpleGrid columns={[1, 2, 2]} gap={6}>
+          <GridItem href="#" title="Coming-soon" thumbnail={thumbYouTube}>
+            Coming-soon
+          </GridItem>
+          <GridItem href="#" title="Coming-soon" thumbnail={thumbInkdrop}>
+            Coming-soon
+          </GridItem>
+        </SimpleGrid>
+
+        <Box align="center" my={4}>
+          <NextLink href="/posts">
+            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+              Popular posts
+            </Button>
+          </NextLink>
+        </Box>
+      </Section>
     </Container>
   )
 }
 
-export default Page
+export default Home
+export { getServerSideProps } from '../components/chakra'

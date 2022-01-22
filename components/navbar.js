@@ -16,8 +16,13 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
+import {
+  IoMedalOutline,
+  IoGitBranchOutline,
+  IoFolderOpenOutline
+} from 'react-icons/io5'
 
-const LinkItem = ({ href, path, children }) => {
+const LinkItem = ({ href, path, _target, children, ...props }) => {
   const active = path === href
   const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
   return (
@@ -26,6 +31,8 @@ const LinkItem = ({ href, path, children }) => {
         p={2}
         bg={active ? 'glassTeal' : undefined}
         color={active ? '#202023' : inactiveColor}
+        _target={_target}
+        {...props}
       >
         {children}
       </Link>
@@ -68,27 +75,44 @@ const Navbar = props => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
-          <LinkItem href="/works" path={path}>
-            Works
-          </LinkItem>
-          <LinkItem href="/posts" path={path}>
-            Posts
-          </LinkItem>
           <LinkItem
-            _target="_blank"
-            href="https://github.com/jamalkaksouri"
+            href="/works"
             path={path}
             display="inline-flex"
             alignItems="center"
             style={{ gap: 4 }}
             pl={2}
           >
-            My Github
+            <IoGitBranchOutline />
+            Works
+          </LinkItem>
+          <LinkItem
+            href="/posts"
+            path={path}
+            display="inline-flex"
+            alignItems="center"
+            style={{ gap: 4 }}
+            pl={2}
+          >
+            <IoFolderOpenOutline />
+            Posts
+          </LinkItem>
+          <LinkItem
+            href="/certifications"
+            path={path}
+            display="inline-flex"
+            alignItems="center"
+            style={{ gap: 4 }}
+            pl={2}
+          >
+            <IoMedalOutline />
+            Certifications
           </LinkItem>
         </Stack>
 
         <Box flex={1} align="right">
           <ThemeToggleButton />
+
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu isLazy id="navbar-menu">
               <MenuButton
@@ -98,21 +122,40 @@ const Navbar = props => {
                 aria-label="Options"
               />
               <MenuList>
-                <NextLink href="/" passHref>
-                  <MenuItem as={Link}>About</MenuItem>
-                </NextLink>
                 <NextLink href="/works" passHref>
-                  <MenuItem as={Link}>Works</MenuItem>
+                  <MenuItem
+                    as={Link}
+                    display="inline-flex"
+                    alignItems="center"
+                    style={{ gap: 4 }}
+                    pl={2}
+                  >
+                    <IoGitBranchOutline />
+                    Works
+                  </MenuItem>
                 </NextLink>
                 <NextLink href="/posts" passHref>
-                  <MenuItem as={Link}>Posts</MenuItem>
+                  <MenuItem
+                    as={Link}
+                    display="inline-flex"
+                    alignItems="center"
+                    style={{ gap: 4 }}
+                    pl={2}
+                  >
+                    <IoFolderOpenOutline />
+                    Posts
+                  </MenuItem>
                 </NextLink>
                 <MenuItem
-                  target="_blank"
                   as={Link}
-                  href="https://github.com/jamalkaksouri"
+                  href="/certifications"
+                  display="inline-flex"
+                  alignItems="center"
+                  style={{ gap: 4 }}
+                  pl={2}
                 >
-                  My Github
+                  <IoMedalOutline />
+                  Certifications
                 </MenuItem>
               </MenuList>
             </Menu>
