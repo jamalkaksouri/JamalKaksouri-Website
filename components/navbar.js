@@ -25,12 +25,12 @@ import {
 const LinkItem = ({ href, path, _target, children, ...props }) => {
   const active = path === href
   const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
+  const inactiveColorBase = useColorModeValue('#4f46e5', '#fbbf24')
   return (
     <NextLink href={href} passHref>
       <Link
         p={2}
-        bg={active ? 'glassTeal' : undefined}
-        color={active ? '#202023' : inactiveColor}
+        color={active ? inactiveColorBase : inactiveColor}
         _target={_target}
         {...props}
       >
@@ -80,7 +80,7 @@ const Navbar = props => {
             path={path}
             display="inline-flex"
             alignItems="center"
-            style={{ gap: 4 }}
+            style={{ gap: 2 }}
             pl={2}
           >
             <IoGitBranchOutline />
@@ -91,7 +91,7 @@ const Navbar = props => {
             path={path}
             display="inline-flex"
             alignItems="center"
-            style={{ gap: 4 }}
+            style={{ gap: 2 }}
             pl={2}
           >
             <IoFolderOpenOutline />
@@ -102,7 +102,7 @@ const Navbar = props => {
             path={path}
             display="inline-flex"
             alignItems="center"
-            style={{ gap: 4 }}
+            style={{ gap: 2 }}
             pl={2}
           >
             <IoMedalOutline />
@@ -127,7 +127,7 @@ const Navbar = props => {
                     as={Link}
                     display="inline-flex"
                     alignItems="center"
-                    style={{ gap: 4 }}
+                    style={{ gap: 2 }}
                     pl={2}
                   >
                     <IoGitBranchOutline />
@@ -139,7 +139,7 @@ const Navbar = props => {
                     as={Link}
                     display="inline-flex"
                     alignItems="center"
-                    style={{ gap: 4 }}
+                    style={{ gap: 2 }}
                     pl={2}
                   >
                     <IoFolderOpenOutline />
@@ -151,7 +151,7 @@ const Navbar = props => {
                   href="/certifications"
                   display="inline-flex"
                   alignItems="center"
-                  style={{ gap: 4 }}
+                  style={{ gap: 2 }}
                   pl={2}
                 >
                   <IoMedalOutline />
