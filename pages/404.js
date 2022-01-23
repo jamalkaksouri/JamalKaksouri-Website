@@ -5,7 +5,8 @@ import {
   Text,
   Container,
   Divider,
-  Button
+  Button,
+  useColorModeValue
 } from '@chakra-ui/react'
 
 const NotFound = () => {
@@ -17,7 +18,12 @@ const NotFound = () => {
 
       <Box my={6} align="center">
         <NextLink href="/">
-          <Button bg="transparent" border="1px" color="yellow300">
+          <Button
+            bg="transparent"
+            border="1px"
+            lineHeight={0}
+            color={useColorModeValue('#494949', 'yellow300')}
+          >
             Return to home
           </Button>
         </NextLink>

@@ -53,7 +53,7 @@ const Home = () => {
           textAlign="center"
         >
           <Image
-            borderColor="whiteAlpha.800"
+            borderColor="blackAlpha.400"
             borderWidth={2}
             borderStyle="solid"
             maxWidth="100px"
@@ -89,17 +89,26 @@ const Home = () => {
         </Heading>
         <BioSection>
           <BioYear>1991</BioYear>
-          Born in Iran(Boukan),
+          Born in Iran(West Azarbayjan, Boukan)
         </BioSection>
         <BioSection>
-          <BioYear>2018</BioYear>
-          Complete the Master of degree in Software Engineer at Isfahan
-          University
+          <BioYear>2009-2010</BioYear>
+          Get started with animation and graphic software
+        </BioSection>
+        <BioSection>
+          <BioYear>2010-2014</BioYear>
+          Complete the Bachelor of degree in Software Engineer and starting and
+          start desktop programming software on the Microsoft .NET platform
+        </BioSection>
+        <BioSection>
+          <BioYear>2015 to 2018</BioYear>
+          Complete the Master of degree in Software Engineer in Isfahan
+          University and starting and start web programming on the Microsoft
+          .NET platform and Frontend
         </BioSection>
         <BioSection>
           <BioYear>2018 to present</BioYear>
-          Fulltime programming with Backend and Frontend via Dotnet technology
-          and etc.
+          Works as a freelance(Full Stack Programmer)
         </BioSection>
       </Section>
       <Section delay={0.2}>
@@ -119,7 +128,7 @@ const Home = () => {
             <Link href="https://github.com/jamalkaksouri" target="_blank">
               <Button
                 variant="ghost"
-                color="cyan500"
+                color={useColorModeValue('#78350f', 'cyan500')}
                 leftIcon={<Icon as={IoLogoGithub} />}
               >
                 @jamalkaksouri
@@ -130,7 +139,7 @@ const Home = () => {
             <Link href="https://twitter.com/jamalkaksouri" target="_blank">
               <Button
                 variant="ghost"
-                color="cyan500"
+                color={useColorModeValue('#78350f', 'cyan500')}
                 leftIcon={<Icon as={IoLogoTwitter} />}
               >
                 @jamalkaksouri
@@ -141,7 +150,7 @@ const Home = () => {
             <Link href="https://instagram.com/jk_betria" target="_blank">
               <Button
                 variant="ghost"
-                color="cyan500"
+                color={useColorModeValue('#78350f', 'cyan500')}
                 leftIcon={<Icon as={IoLogoInstagram} />}
               >
                 @jk_betria
@@ -155,7 +164,7 @@ const Home = () => {
             >
               <Button
                 variant="ghost"
-                color="cyan500"
+                color={useColorModeValue('#78350f', 'cyan500')}
                 leftIcon={<Icon as={IoLogoStackoverflow} />}
               >
                 @jamal-kaksouri
@@ -188,7 +197,7 @@ const Home = () => {
               bg="transparent"
               border="1px"
               lineHeight={0}
-              color="lime300"
+              color={useColorModeValue('#494949', 'lime300')}
             >
               Popular posts
             </Button>
