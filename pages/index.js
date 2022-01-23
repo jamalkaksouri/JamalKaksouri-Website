@@ -82,13 +82,6 @@ const Home = () => {
           </NextLink>
           .
         </Paragraph>
-        <Box textAlign="center" my={4}>
-          <NextLink href="/work">
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              My portfolio
-            </Button>
-          </NextLink>
-        </Box>
       </Section>
       <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
@@ -121,12 +114,12 @@ const Home = () => {
         <Heading as="h3" variant="section-title">
           On the web
         </Heading>
-        <List>
+        <List mb={2}>
           <ListItem>
             <Link href="https://github.com/jamalkaksouri" target="_blank">
               <Button
                 variant="ghost"
-                colorScheme="teal"
+                color="cyan500"
                 leftIcon={<Icon as={IoLogoGithub} />}
               >
                 @jamalkaksouri
@@ -137,7 +130,7 @@ const Home = () => {
             <Link href="https://twitter.com/jamalkaksouri" target="_blank">
               <Button
                 variant="ghost"
-                colorScheme="teal"
+                color="cyan500"
                 leftIcon={<Icon as={IoLogoTwitter} />}
               >
                 @jamalkaksouri
@@ -148,7 +141,7 @@ const Home = () => {
             <Link href="https://instagram.com/jk_betria" target="_blank">
               <Button
                 variant="ghost"
-                colorScheme="teal"
+                color="cyan500"
                 leftIcon={<Icon as={IoLogoInstagram} />}
               >
                 @jk_betria
@@ -162,7 +155,7 @@ const Home = () => {
             >
               <Button
                 variant="ghost"
-                colorScheme="teal"
+                color="cyan500"
                 leftIcon={<Icon as={IoLogoStackoverflow} />}
               >
                 @jamal-kaksouri
@@ -190,7 +183,13 @@ const Home = () => {
 
         <Box align="center" my={4}>
           <NextLink href="/posts">
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+            <Button
+              rightIcon={<ChevronRightIcon />}
+              bg="transparent"
+              border="1px"
+              lineHeight={0}
+              color="lime300"
+            >
               Popular posts
             </Button>
           </NextLink>
