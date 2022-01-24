@@ -21,6 +21,19 @@ $PROJECT_ROOT
 └── public
 ```
 
+## Setup
+
+1. run command `npm install` in root project
+2. run `npm run dev`
+3. open browser type: http://localhost:3001
+
+If you received a similar error like this: `Error: listen EACCES: permission denied 0.0.0.0:3001`
+Open Command Prompt as Administrator and run:
+`net stop winnat`
+then
+`net start winnat`
+and try to run again `npm run dev`
+
 ## License
 
 MIT License.
