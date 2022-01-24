@@ -1,36 +1,32 @@
-import Layout from "../components/layouts/main";
-import Fonts from "../components/fonts";
-import { AnimatePresence } from "framer-motion";
-import Chakra from "../components/chakra";
-import { orientedImg } from "/public/orientation-img.svg";
-import { Image } from "@chakra-ui/react";
-import { useMobileOrientation } from "react-device-detect";
-import dynamic from "next/dynamic";
-
-// const DynamicComponentWithNoSSR = dynamic(() => import(Website), {
-//   ssr: false,
-// });
+import Layout from '../components/layouts/main'
+import Fonts from '../components/fonts'
+import { AnimatePresence } from 'framer-motion'
+import Chakra from '../components/chakra'
+import { useMobileOrientation, isMobileOnly } from 'react-device-detect'
+import dynamic from 'next/dynamic'
+import '/pages/_app.css'
 
 const Website = ({ Component, pageProps, router }) => {
-  const { isLandscape } = useMobileOrientation();
+  const { isLandscape } = useMobileOrientation()
   return (
-    // <DynamicComponentWithNoSSR>
-    <Chakra cookies={pageProps.cookies}>
-      {isLandscape && alert("102030")}
-      {/* just for test git is support commit fetch */}
-      {/* just for test git is support commit fetch */}
-      {/* just for test git is support commit fetch */}
-      <Fonts />
-      <Layout router={router}>
-        <AnimatePresence exitBeforeEnter initial={true}>
-          <Component {...pageProps} key={router.route} />
-        </AnimatePresence>
-      </Layout>
-    </Chakra>
-    // </DynamicComponentWithNoSSR>
-  );
-};
+    <>
+      <Chakra cookies={pageProps.cookies}>
+        {isMobileOnly && isLandscape
+          ? (document.getElementById('lock-orientation').style.display =
+              'table')
+          : (document.getElementById('lock-orientation').style.display =
+              'none')}
+        <Fonts />
+        <Layout router={router}>
+          <AnimatePresence exitBeforeEnter initial={true}>
+            <Component {...pageProps} key={router.route} />
+          </AnimatePresence>
+        </Layout>
+      </Chakra>
+    </>
+  )
+}
 
 export default dynamic(() => Promise.resolve(Website), {
-  ssr: false,
-});
+  ssr: false
+})
