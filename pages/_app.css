@@ -41,3 +41,7 @@
   font-style: italic;
   vertical-align: middle;
 }
+
+.isMobilePhone {
+  display: table !important;
+}

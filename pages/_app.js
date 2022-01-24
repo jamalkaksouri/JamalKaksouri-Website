@@ -8,22 +8,19 @@ import '/pages/_app.css'
 
 const Website = ({ Component, pageProps, router }) => {
   const { isLandscape } = useMobileOrientation()
+  const getElm = document.getElementById('lock-orientation')
   return (
-    <>
-      <Chakra cookies={pageProps.cookies}>
-        {isMobileOnly && isLandscape
-          ? (document.getElementById('lock-orientation').style.display =
-              'table')
-          : (document.getElementById('lock-orientation').style.display =
-              'none')}
-        <Fonts />
-        <Layout router={router}>
-          <AnimatePresence exitBeforeEnter initial={true}>
-            <Component {...pageProps} key={router.route} />
-          </AnimatePresence>
-        </Layout>
-      </Chakra>
-    </>
+    <Chakra cookies={pageProps.cookies}>
+      {isMobileOnly && isLandscape
+        ? getElm.classList.add('isMobilePhone')
+        : getElm.classList.remove('isMobilePhone')}
+      <Fonts />
+      <Layout router={router}>
+        <AnimatePresence exitBeforeEnter initial={true}>
+          <Component {...pageProps} key={router.route} />
+        </AnimatePresence>
+      </Layout>
+    </Chakra>
   )
 }
 
