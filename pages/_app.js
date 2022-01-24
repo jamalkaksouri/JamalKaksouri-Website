@@ -4,6 +4,7 @@ import { AnimatePresence } from 'framer-motion'
 import Chakra from '../components/chakra'
 
 function Website({ Component, pageProps, router }) {
+  // chack git fata error already here
   return (
     <Chakra cookies={pageProps.cookies}>
       <Fonts />
