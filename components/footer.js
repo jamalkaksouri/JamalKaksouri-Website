@@ -18,8 +18,8 @@ const Footer = () => {
     <Box align="center" opacity={0.4} fontSize="sm">
       &copy; {new Date().getFullYear()} Jamal Kaksouri. All Rights Reserved.
       <p>
-        Your device: {rdd.isMobileOnly && rdd.mobileVendor}-{rdd.osName}(
-        {rdd.osVersion})
+        Your device: {rdd.isMobileOnly && `${rdd.mobileVendor}-`}
+        {rdd.osName}({rdd.osVersion})
       </p>
       <p>Your ip: {ip}</p>
     </Box>
