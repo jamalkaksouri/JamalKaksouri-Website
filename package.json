@@ -4,9 +4,8 @@
   "description": "jamal kaksouri website",
   "scripts": {
     "dev": "next dev",
-    "export": "next build && next export",
-    "start": "NODE_ENV=production node ./server.js",
     "build": "next build",
+    "start": "next start -p 3001",
     "prettier": "prettier -write .",
     "lint": "next lint"
   },
