@@ -3,12 +3,12 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 
-import thumbFishWorkflow from '../public/images/coming-soon.jpg'
 import thumbMyDeskSetup from '../public/images/coming-soon.jpg'
 import thumb500PaidUsers from '../public/images/coming-soon.jpg'
 import thumbFinancialGoal from '../public/images/coming-soon.jpg'
 import thumbHowToPriceYourself from '../public/images/coming-soon.jpg'
 import thumb50xFaster from '../public/images/coming-soon.jpg'
+import openTelementryImg from '../public/images/posts/openTelementry.png'
 
 const Posts = () => (
   <Layout title="Posts">
@@ -20,9 +20,9 @@ const Posts = () => (
       <Section delay={0.1}>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            title="Coming-soon"
-            thumbnail={thumbFishWorkflow}
-            href="#"
+            title="Deep Dive into Open Telemetry for .NET"
+            thumbnail={openTelementryImg}
+            href="/PostDetail"
           />
           <GridItem title="Coming-soon" thumbnail={thumbMyDeskSetup} href="#" />
         </SimpleGrid>

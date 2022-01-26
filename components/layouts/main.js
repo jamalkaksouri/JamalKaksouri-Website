@@ -13,7 +13,7 @@ const LazyVoxelDog = dynamic(() => import('../voxel-dog'), {
 const Main = ({ children, router }) => {
   return (
     <Box as="main" pb={8}>
-      <Head>
+      <Head title="Jamal Kaksouri">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Jamal Kaksouri's homepage" />
         <meta name="author" content="Jamal Kaksouri" />
